@@ -5,7 +5,7 @@ import Navbar from "./components/Navbar.jsx";
 import Footer from "./components/Footer.jsx";
 import LeadModal from "./components/LeadModal.jsx";
 import ScrollToTop from "./components/ScrollToTop.jsx";
-import WhatsAppButton from "./components/WhatsAppButton.jsx";
+import WhatsAppButton from "./components/WhatsAppbutton.jsx";
 
 import Home from "./pages/Home.jsx";
 import Services from "./pages/Services.jsx";
