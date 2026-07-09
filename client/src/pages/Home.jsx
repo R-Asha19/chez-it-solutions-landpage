@@ -7,7 +7,7 @@ import {
 import { useLeadModal } from "../context/LeadModalContext.jsx";
 import { services, industries } from "../data/content.js";
 import { SectionHeading, Card, IconTile, StatPill } from "../components/UI.jsx";
-import AIChipGraphic from "../components/AIChipGraphic.jsx";
+import AIChipGraphic from "../components/Aichipgraphic.jsx";
 import RobotMascot from "../components/RobotMascot.jsx";
 
 const Home = () => {
