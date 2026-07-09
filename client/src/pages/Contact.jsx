@@ -39,12 +39,22 @@ const Contact = () => {
           <h2 className="text-xl font-bold text-navy-900">Contact Information</h2>
           <ul className="mt-6 space-y-5 text-sm text-navy-900/60">
             <li className="flex items-start gap-3">
-              <Phone size={18} className="mt-0.5 flex-none text-brand-indigo" />
-              <a href="tel:+917094640322" className="transition hover:text-brand-indigo">
-                +91 70946 40322
-              </a>
-            </li>
+  <Phone size={18} className="mt-0.5 flex-none text-brand-indigo" />
+  <div className="flex flex-col gap-1">
+    <a href="tel:04445806259" className="transition hover:text-brand-indigo">
+      044 4580 6259
+    </a>
+    <a href="tel:+919150008013" className="transition hover:text-brand-indigo">
+      +91 91500 08013
+    </a>
+  </div>
+</li>
             <li className="flex items-start gap-3">
+  <Mail size={18} className="mt-0.5 flex-none text-brand-indigo" />
+  <a href="mailto:info@chezitsolutions.com" className="transition hover:text-brand-indigo">
+    info@chezitsolutions.com
+  </a>
+</li><li className="flex items-start gap-3">
               <Mail size={18} className="mt-0.5 flex-none text-brand-indigo" />
               <a href="mailto:enquiry1ground@gmail.com" className="transition hover:text-brand-indigo">
                 enquiry1ground@gmail.com
@@ -64,7 +74,7 @@ const Contact = () => {
             <li className="flex items-start gap-3">
               <MessageCircle size={18} className="mt-0.5 flex-none text-[#25D366]" />
               <a
-                href="https://wa.me/917094640322?text=Hi%20Chez%20IT%20Solutions!%20I%27d%20like%20to%20know%20more%20about%20your%20AI-powered%20marketing%20services."
+                href="https://wa.me/919150008013?text=Hi%20Chez%20IT%20Solutions!%20I%27d%20like%20to%20know%20more%20about%20your%20AI-powered%20marketing%20services."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-medium text-[#25D366] transition hover:brightness-90"

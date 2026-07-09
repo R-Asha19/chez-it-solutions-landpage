@@ -3,7 +3,7 @@ import React from "react";
 // Real WhatsApp number for Chez IT Solutions (same one used elsewhere on the site).
 // wa.me links work for anyone, on desktop or mobile, with no API/account setup needed —
 // clicking it just opens a WhatsApp chat pre-filled with the message below.
-const WHATSAPP_NUMBER = "917094640322";
+const WHATSAPP_NUMBER = "919150008013";
 const DEFAULT_MESSAGE =
   "Hi Chez IT Solutions! I'd like to know more about your AI-powered marketing services.";
 

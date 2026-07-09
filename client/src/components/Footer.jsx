@@ -14,7 +14,7 @@ const quickLinks = [
 
 const serviceLinks = [
   "AI Performance Marketing",
-  "SEO & AI Search Optimization",
+  "SEO & AI Powered AEO & GEO Optimization",
   "Website Design & Development",
   "AI Chatbots & Automation",
   "Google Ads & Meta Ads",
@@ -139,7 +139,7 @@ const Footer = () => (
 
     <div className="border-t border-white/5 px-6 py-6">
       <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 text-xs text-white/40 sm:flex-row">
-        <p>© 2026 Chez IT Solutions. All Rights Reserved.</p>
+        <p>© 2025 Chez IT Solutions Pvt Ltd. All Rights Reserved.</p>
         <div className="flex gap-5">
           <Link to="/privacy" className="hover:text-white">
             Privacy Policy
