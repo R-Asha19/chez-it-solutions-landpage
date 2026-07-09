@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Facebook, Instagram, Linkedin, Youtube, Sparkles, Phone, Mail, MapPin } from "lucide-react";
+import logo from "../assets/logo.jpeg";
 
 const quickLinks = [
   { to: "/", label: "Home" },
@@ -47,10 +48,11 @@ const Footer = () => (
     <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-6 pb-12 sm:grid-cols-2 lg:grid-cols-4">
       <div>
         <div className="flex items-center gap-2">
-          <span className="grid h-8 w-8 place-items-center rounded-lg bg-brand-gradient">
-            <Sparkles size={16} className="text-white" />
-          </span>
-          <span className="text-sm font-bold">Chez IT Solutions Pvt Ltd</span>
+          <img src={logo} alt="Chez IT Solutions logo" className="h-8 w-8 rounded-lg object-cover" />
+<span className="leading-tight">
+  <span className="block text-sm font-bold">Chez IT Solutions Pvt Ltd</span>
+  <span className="block text-[10px] text-white/40">AI-Powered Digital Marketing</span>
+</span>
         </div>
         <p className="mt-4 text-sm leading-relaxed text-white/50">
           Helping businesses grow with AI-powered marketing, automation &amp; data-driven

@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { NavLink, Link } from "react-router-dom";
-import { Menu, X, Sparkles } from "lucide-react";
+
 import { useLeadModal } from "../context/LeadModalContext.jsx";
+import logo from "../assets/logo.jpeg";
 
 const links = [
   { to: "/", label: "Home" },
@@ -26,9 +27,7 @@ const Navbar = () => {
     <header className="sticky top-0 z-40 border-b border-white/5 bg-navy-950/90 backdrop-blur-md">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         <Link to="/" className="flex items-center gap-2" onClick={() => setOpen(false)}>
-          <span className="grid h-8 w-8 place-items-center rounded-lg bg-brand-gradient">
-            <Sparkles size={16} className="text-white" />
-          </span>
+          <img src={logo} alt="Chez IT Solutions logo" className="h-8 w-8 rounded-lg object-cover" />
           <span className="leading-tight">
             <span className="block text-sm font-bold text-white">Chez IT Solutions</span>
             <span className="block text-[10px] text-white/40">AI-Powered Digital Marketing</span>
