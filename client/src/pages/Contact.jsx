@@ -54,12 +54,7 @@ const Contact = () => {
   <a href="mailto:info@chezitsolutions.com" className="transition hover:text-brand-indigo">
     info@chezitsolutions.com
   </a>
-</li><li className="flex items-start gap-3">
-              <Mail size={18} className="mt-0.5 flex-none text-brand-indigo" />
-              <a href="mailto:enquiry1ground@gmail.com" className="transition hover:text-brand-indigo">
-                enquiry1ground@gmail.com
-              </a>
-            </li>
+</li>
             <li className="flex items-start gap-3">
               <MapPin size={18} className="mt-0.5 flex-none text-brand-indigo" />
               <a
