@@ -24,18 +24,20 @@ const serviceLinks = [
 // clean placeholder root links so the "Connect" buttons don't break.
 // Swap each `href` for the real profile URL as soon as you have it.
 const socialLinks = [
-  { Icon: Facebook, href: "https://www.facebook.com", label: "Facebook" },
-  { Icon: Instagram, href: "https://www.instagram.com", label: "Instagram" },
-  { Icon: Linkedin, href: "https://www.linkedin.com", label: "LinkedIn" },
-  { Icon: Youtube, href: "https://www.youtube.com", label: "YouTube" },
+  { Icon: Facebook, href: "https://www.facebook.com/people/Chez-it-Solutions-PVT-Ltd/61574821846087/", label: "Facebook" },
+  { Icon: Instagram, href: "https://www.instagram.com/chezitsolutionspvtltd/", label: "Instagram" },
+  { Icon: Linkedin, href: "https://in.linkedin.com/company/chez-it-solutions-pvt-ltd", label: "LinkedIn" },
+  { Icon: Youtube, href: "https://www.youtube.com/@chezITSolutions", label: "YouTube" },
 ];
 
 // Real contact details (shared with the 1Ground property — same registered
 // office). tel: opens the dialer, mailto: opens the visitor's mail app, and
 // the maps link opens the exact pinned location in a new tab.
-const PHONE_DISPLAY = "+91 70946 40322";
-const PHONE_HREF = "tel:+917094640322";
-const EMAIL = "enquiry1ground@gmail.com";
+const PHONES = [
+  { display: "044 4580 6259", href: "tel:04445806259" },
+  { display: "+91 91500 08013", href: "tel:+919150008013" },
+];
+const EMAIL = "info@chezitsolutions.com";
 const MAPS_HREF =
   "https://www.google.com/maps/place/Chez+IT+Solutions+Pvt+Ltd/@12.950289,80.1427074,851m/data=!3m1!1e3!4m6!3m5!1s0x3a525fe6b14617b7:0x85c21eb34295f5cf!8m2!3d12.9506236!4d80.1447244!16s%2Fg%2F11x6plywmd?entry=ttu&g_ep=EgoyMDI2MDYxNi4wIKXMDSoASAFQAw%3D%3D";
 const ADDRESS_LINES = ["Chez IT Solutions Pvt Ltd, 61/87, Station Rd, Radha Nagar,", "Chromepet, Chennai, Tamil Nadu 600044"];
@@ -100,12 +102,14 @@ const Footer = () => (
       <div>
         <h4 className="text-sm font-semibold text-white">Contact Us</h4>
         <ul className="mt-4 space-y-3 text-sm text-white/50">
-          <li className="flex items-center gap-2">
-            <Phone size={14} className="flex-none" />
-            <a href={PHONE_HREF} className="transition hover:text-white">
-              {PHONE_DISPLAY}
-            </a>
-          </li>
+          {PHONES.map((p) => (
+  <li key={p.href} className="flex items-center gap-2">
+    <Phone size={14} className="flex-none" />
+    <a href={p.href} className="transition hover:text-white">
+      {p.display}
+    </a>
+  </li>
+))}
           <li className="flex items-center gap-2">
             <Mail size={14} className="flex-none" />
             <a href={`mailto:${EMAIL}`} className="transition hover:text-white">
