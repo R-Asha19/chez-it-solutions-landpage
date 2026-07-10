@@ -12,11 +12,14 @@ const getTransporter = () => {
   if (transporter) return transporter;
 
   transporter = nodemailer.createTransport({
-    service: "gmail",
+    host: "smtp.gmail.com",
+    port: 465,
+    secure: true,
     auth: {
       user: process.env.GMAIL_USER,
       pass: process.env.GMAIL_APP_PASSWORD,
     },
+    family: 4, // Force IPv4 — Render has IPv6 connectivity issues with Gmail SMTP
   });
 
   return transporter;
