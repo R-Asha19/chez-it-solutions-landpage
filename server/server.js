@@ -8,6 +8,7 @@ import leadRoutes from "./routes/leadRoutes.js";
 dotenv.config();
 
 const app = express();
+app.set("trust proxy", 1);
 
 // Core middleware
 app.use(express.json());
