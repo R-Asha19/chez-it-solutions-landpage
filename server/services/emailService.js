@@ -34,7 +34,7 @@ export const sendLeadNotification = async (lead) => {
   try {
     const resend = getResend();
     await resend.emails.send({
-      from: "Chez IT Solutions <onboarding@resend.dev>",
+      from: "Chez IT Solutions <notifications@chezitsolutions.com>",
       to: recipient,
       subject: `New Lead: ${lead.name}`,
       text: messageLines,
