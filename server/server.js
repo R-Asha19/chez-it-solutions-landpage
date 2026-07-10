@@ -5,16 +5,30 @@ import rateLimit from "express-rate-limit";
 import connectDB from "./config/db.js";
 import leadRoutes from "./routes/leadRoutes.js";
 
-
 dotenv.config();
 
 const app = express();
 
 // Core middleware
 app.use(express.json());
+
+const allowedOrigins = [
+  "https://www.chezitsolutions.com",
+  "https://chezitsolutions.com",
+  "https://chez-it-solutions-landpage.vercel.app",
+  "http://localhost:5173",
+];
+
 app.use(
   cors({
-    origin: process.env.CLIENT_ORIGIN || "http://localhost:5173",
+    origin: function (origin, callback) {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
+    credentials: true,
   })
 );
 
