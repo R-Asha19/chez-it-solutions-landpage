@@ -14,10 +14,10 @@ export const services = [
   },
   {
     icon: Search,
-    title: "SEO & AI Search Optimization",
-    desc: "Rank higher on Google, ChatGPT, Gemini & AI search engines with our strategies.",
-    details:
-      "Beyond classic SEO, we optimize your content and structured data so AI answer engines like ChatGPT and Gemini surface your brand — technical audits, content clusters, and authoritative backlinks included.",
+title: "SEO & AI Powered AEO & GEO Optimization",
+desc: "Rank higher on Google, ChatGPT, Gemini & AI search engines with Answer Engine & Generative Engine Optimization.",
+details:
+  "We optimize your content and structured data for both classic search engines and AI answer engines — combining AEO (Answer Engine Optimization) and GEO (Generative Engine Optimization) so ChatGPT, Gemini, and Google's AI Overviews surface and recommend your brand, backed by technical audits, content clusters, and authoritative backlinks.",
   },
   {
     icon: Monitor,
@@ -151,12 +151,12 @@ export const caseStudies = [
 export const blogPosts = [
   {
     slug: "ai-search-optimization-2026",
-    title: "How AI Search Is Rewriting the Rules of SEO in 2026",
-    excerpt:
-      "ChatGPT and Gemini are becoming discovery surfaces of their own. Here's how to structure your content so AI engines cite your brand.",
-    category: "SEO & AI Search",
-    date: "2026-06-18",
-    readTime: "6 min read",
+title: "How AEO & GEO Are Rewriting the Rules of SEO in 2026",
+excerpt:
+  "ChatGPT and Gemini are becoming discovery surfaces of their own. Here's how Answer Engine and Generative Engine Optimization help your brand get cited by AI.",
+category: "SEO & AEO/GEO",
+date: "2026-06-18",
+readTime: "6 min read",
   },
   {
     slug: "whatsapp-automation-lead-response",
