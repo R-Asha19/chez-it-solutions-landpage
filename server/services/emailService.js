@@ -1,34 +1,13 @@
-import nodemailer from "nodemailer";
+import { Resend } from "resend";
 
 /**
- * Sends "new lead" email notifications using Gmail + an App Password.
- * Much simpler than WhatsApp-web.js — no browser, no session files,
- * no Chrome/Puppeteer, works reliably on any host including Render free tier.
+ * Sends "new lead" email notifications using Resend's HTTP API.
+ * Uses HTTPS, not SMTP — avoids port-blocking issues common on
+ * cloud hosts like Render free tier.
  */
 
-let transporter = null;
+const getResend = () => new Resend(process.env.RESEND_API_KEY);
 
-const getTransporter = () => {
-  if (transporter) return transporter;
-
-  transporter = nodemailer.createTransport({
-    host: "smtp.gmail.com",
-    port: 465,
-    secure: true,
-    auth: {
-      user: process.env.GMAIL_USER,
-      pass: process.env.GMAIL_APP_PASSWORD,
-    },
-    family: 4, // Force IPv4 — Render has IPv6 connectivity issues with Gmail SMTP
-  });
-
-  return transporter;
-};
-
-/**
- * Sends a plain-text email to the configured admin address.
- * Fails silently (logs only) so an email outage never blocks lead saving.
- */
 export const sendLeadNotification = async (lead) => {
   const recipient = process.env.ADMIN_EMAIL;
 
@@ -36,8 +15,8 @@ export const sendLeadNotification = async (lead) => {
     console.warn("ADMIN_EMAIL not set — skipping email notification.");
     return;
   }
-  if (!process.env.GMAIL_USER || !process.env.GMAIL_APP_PASSWORD) {
-    console.warn("GMAIL_USER or GMAIL_APP_PASSWORD not set — skipping email notification.");
+  if (!process.env.RESEND_API_KEY) {
+    console.warn("RESEND_API_KEY not set — skipping email notification.");
     return;
   }
 
@@ -53,8 +32,9 @@ export const sendLeadNotification = async (lead) => {
     .join("\n");
 
   try {
-    await getTransporter().sendMail({
-      from: `"Chez IT Solutions Website" <${process.env.GMAIL_USER}>`,
+    const resend = getResend();
+    await resend.emails.send({
+      from: "Chez IT Solutions <onboarding@resend.dev>",
       to: recipient,
       subject: `New Lead: ${lead.name}`,
       text: messageLines,
