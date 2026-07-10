@@ -1,5 +1,5 @@
 import Lead from "../models/Lead.js";
-import { sendLeadNotification } from "../services/whatsappService.js";
+import { sendLeadNotification } from "../services/emailService.js";
 
 // POST /api/leads
 export const createLead = async (req, res) => {
